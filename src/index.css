@@ -1,9 +1,9 @@
-/* styles.css */
-
-/* Basic reset and styling for the table */
 body {
-  font-family: Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: 20px;
+  font-weight: 400;
+  background-color: #d2f7ff;
 }
 
 h2 {
@@ -14,17 +14,22 @@ h2 {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  background: rgba(255, 255, 255, 0.38);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.1px);
+  -webkit-backdrop-filter: blur(9.1px);
 }
 
 .user-table th,
 .user-table td {
-  border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
 }
 
 .user-table th {
-  background-color: #f2f2f2;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
 }
 
 /* Style for action buttons */
@@ -33,18 +38,31 @@ h2 {
   padding: 6px 10px;
   margin-right: 5px;
   cursor: pointer;
+  font-weight: bold;
+  border: 1px solid black;
 }
 
 .edit-btn {
-  background-color: #4caf50;
-  color: white;
+  background-color: #90ee90;
+  color: black;
   border: none;
+  border-radius: 10px;
 }
 
 .delete-btn {
+  border-radius: 10px;
   background-color: #f44336;
   color: white;
   border: none;
+  text-align: center;
+}
+
+.edit-btn:hover{
+  background-color:#b2fbb2;
+}
+
+.delete-btn:hover{
+  background-color: rgb(255, 102, 102);
 }
 
 form {
@@ -62,4 +80,68 @@ form input {
 form button {
   padding: 8px;
   cursor: pointer;
+}
+
+.user-table td {
+  border: none;
+  padding: 8px;
+  text-align: left;
+}
+
+#search {
+  padding: 12px;
+  border: 2px solid black;
+  font-size: 15px;
+  border-radius: 15px;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  background-color: #d2f7ff;
+}
+
+.page-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+.pagebtn-container {
+  display: flex;
+  border-radius: 10px;
+}
+
+.page-btn {
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+  font-weight: bold;
+  
+}
+
+.page-btn:hover {
+  background-color:cyan;
+}
+
+tr {
+  cursor: pointer;
+}
+
+tr:hover {
+  background-color: rgba(146, 144, 144, 0.38);
+}
+
+.selected{
+  background-color: rgba(146, 144, 144, 0.38);
+}
+
+.head-input{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.page-hold{
+  background-color:rgb(147, 229, 229);
 }
